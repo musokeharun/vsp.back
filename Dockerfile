@@ -4,7 +4,7 @@ RUN mkdir parse
 
 ADD . /parse
 WORKDIR /parse
-RUN npm install
+RUN npm cache clean --force && npm install
 
 ENV APP_ID setYourAppId
 ENV MASTER_KEY setYourMasterKey

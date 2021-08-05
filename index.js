@@ -7,12 +7,6 @@ const path = require('path');
 const args = process.argv || [];
 const test = args.some(arg => arg.includes('jasmine'));
 
-// var FSFilesAdapter = require('@parse/fs-files-adapter');
-// var fsAdapter = new FSFilesAdapter({
-// "filesSubDirectory": "files/",
-// "encryptionKey": "_VSP_FILE_ENC_KEY"
-// });
-
 const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
 if (!databaseUri) {
